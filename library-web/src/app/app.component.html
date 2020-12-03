@@ -1,13 +1,49 @@
-<div id="template">
-  <div class="jumbotron">
-    <h1>Hello Angular</h1>
-  </div>
+<div id="wrapper">
+
   <!-- Side Bar -->
+  <div id="sidebar">
+    <div class="header">
+      <span>The Librian</span>
+    </div>
 
-  <!-- Container -->
+    <div class="menu">
+      <ul>
+        <li>
+          <a>
+            <i class="fa fa-home"></i>
+            Library Home
+          </a>
+        </li>
 
-  <!-- Header -->
+        <li>
+          <a>
+            <i class="fa fa-users"></i>
+            Member Management
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <i class="fa fa-book"></i>
+            Book Management
+          </a>
+        </li>
+
+        <li>
+          <a [routerLink]="['/master/authors']" routerLinkActive="active">
+            <i class="fa fa-user-o"></i>
+            Auther Management
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
 
   <!-- Content -->
-  <router-outlet></router-outlet>
+  <div id="content">
+
+    <router-outlet></router-outlet>
+  </div>
+
 </div>

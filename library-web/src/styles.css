@@ -1,1 +1,80 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100vh;
+}
+
+.btn.btn-primary:hover {
+    background-color: #6abf69;
+    border-color: #6abf69;
+}
+
+.btn.btn-primary {
+    background-color: #388e3c;
+    border-color: #388e3c;
+}
+
+#wrapper {
+    display: flex;
+    height: 100vh;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 280px;
+    max-width: 280px;
+    background-color: #00600f;
+    color: #d7ffd9;
+}
+
+
+#sidebar > .header {
+    padding: 30px 30px 30px 20px;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#sidebar > .menu a {
+    display: block;
+    padding: 16px 20px;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+.menu a:link, 
+.menu a:visited 
+ {
+    text-decoration: none;
+    color: #d7ffd9;
+}
+
+.menu a:hover 
+ {
+    background-color: #388e3c;
+    color: #d7ffd9;
+}
+
+.menu a.active {
+    background-color: #d7ffd9;
+    color: black;
+}
+
+.menu a > i{ 
+    width: 28px;
+}
+
+#sidebar > .header > span {
+    font-size: 4em;
+    line-height: 0.8em;
+}
+
+#content {
+    width: 100vw;
+    padding: 10px 40px;
+}
+
+.content-header {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
