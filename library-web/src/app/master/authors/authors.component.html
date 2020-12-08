@@ -3,10 +3,10 @@
     <h3>Author Management</h3>
 
     <div class="actions">
-        <a href="#" class="btn btn-primary mr-2">
+        <a (click)="export()" class="btn btn-primary mr-2">
             <i class="fa fa-print mr-2"></i> Export
         </a>
-        <a href="#" class="btn btn-primary">
+        <a (click)="addNew()" class="btn btn-primary">
             <i class="fa fa-plus mr-2"></i> Add New
         </a>
     </div>
@@ -16,6 +16,34 @@
 <div class="card">
     <div class="card-body">
 
+        <form [formGroup]="form" class="form">
+
+            <div class="form-row">
+
+                <div class="col">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input formControlName="name" type="text" class="form-control"
+                            placeholder="Search Name Or Pen Name">
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group">
+                        <label>Boook Name</label>
+                        <input formControlName="bookName" type="text" class="form-control"
+                            placeholder="Search Book Name">
+                    </div>
+                </div>
+
+                <div class="col">
+                    <a (click)="search()" class="btn btn-primary" style="margin-top: 2em;">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </div>
+            </div>
+        </form>
+
     </div>
 </div>
 
@@ -23,6 +51,7 @@
 <table class="table mt-4">
     <thead>
         <tr>
+            <th>Pen Name</th>
             <th>Name</th>
             <th>Gender</th>
             <th>Country</th>
@@ -31,4 +60,24 @@
             <th></th>
         </tr>
     </thead>
+
+    <tbody>
+        <tr *ngFor="let item of list">
+            <td>{{item.penName}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.gender}}</td>
+            <td>{{item.country}}</td>
+            <td>{{item.dob}}</td>
+            <td>{{item.title}}</td>
+            <td>
+                <a (click)="edit(item)" class="btn btn-link">
+                    <i class="fa fa-pencil"></i>
+                </a>
+            </td>
+        </tr>
+    </tbody>
 </table>
+
+<div id="editDialog" class="modal fade">
+    <app-author-edit></app-author-edit>
+</div>

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AuthorEditComponent } from './authors/author-edit/author-edit.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { MasterRoutingModule } from './master-routing.module';
@@ -13,7 +14,8 @@ import { MasterRoutingModule } from './master-routing.module';
   ],
   imports: [
     CommonModule,
-    MasterRoutingModule
+    MasterRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class MasterModule { }
