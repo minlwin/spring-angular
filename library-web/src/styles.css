@@ -50,7 +50,7 @@ html, body {
 
 .menu a:hover 
  {
-    background-color: #388e3c;
+    background-color: #43a047;
     color: #d7ffd9;
 }
 
@@ -61,6 +61,11 @@ html, body {
 
 .menu a > i{ 
     width: 28px;
+}
+
+.menu li ul  li  a{
+    padding-left: 48px !important;
+    background-color: #388e3c;
 }
 
 #sidebar > .header > span {

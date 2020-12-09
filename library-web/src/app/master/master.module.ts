@@ -4,6 +4,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AuthorEditComponent } from './authors/author-edit/author-edit.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { MasterRoutingModule } from './master-routing.module';
+import { CategoriesComponent } from './categories/categories.component';
+import { BooksComponent } from './books/books.component';
+import { MembersComponent } from './members/members.component';
+import { MemberTypesComponent } from './member-types/member-types.component';
+import { LibariansComponent } from './libarians/libarians.component';
 
 
 
@@ -11,6 +16,11 @@ import { MasterRoutingModule } from './master-routing.module';
   declarations: [
     AuthorsComponent,
     AuthorEditComponent,
+    CategoriesComponent,
+    BooksComponent,
+    MembersComponent,
+    MemberTypesComponent,
+    LibariansComponent,
   ],
   imports: [
     CommonModule,

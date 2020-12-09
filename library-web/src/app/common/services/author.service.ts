@@ -12,6 +12,12 @@ export class AuthorService {
     return from([this.list])
   }
 
+  save(data: any): Observable<any> {
+    this.list.push(data)
+    data.id = this.list.length;
+    return from([data])
+  }
+
   private list: any[] = [
     {
       id: 1,
