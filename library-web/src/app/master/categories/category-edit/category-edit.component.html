@@ -1,0 +1,27 @@
+<div class="modal-dialog">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <h5>{{ edit ? 'Edit' : 'Add New'}} Category</h5>
+        </div>
+
+        <div class="modal-body">
+            <form [formGroup]="form" class="form">
+
+                <div class="form-group">
+                    <label>Category Name</label>
+                    <input formControlName="name" type="text" placeholder="Enter Name" class="form-control">
+                </div>
+
+            </form>
+        </div>
+
+        <div class="modal-footer">
+            <a (click)="save()" [class.disabled]="!form.valid" class="btn btn-primary">
+                <i class="fa fa-save"></i> Save
+            </a>
+        </div>
+
+    </div>
+</div>

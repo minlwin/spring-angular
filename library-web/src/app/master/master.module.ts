@@ -9,6 +9,7 @@ import { BooksComponent } from './books/books.component';
 import { MembersComponent } from './members/members.component';
 import { MemberTypesComponent } from './member-types/member-types.component';
 import { LibariansComponent } from './libarians/libarians.component';
+import { CategoryEditComponent } from './categories/category-edit/category-edit.component';
 
 
 
@@ -21,6 +22,7 @@ import { LibariansComponent } from './libarians/libarians.component';
     MembersComponent,
     MemberTypesComponent,
     LibariansComponent,
+    CategoryEditComponent,
   ],
   imports: [
     CommonModule,
